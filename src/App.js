@@ -44,11 +44,11 @@ const questions = [
 ];
 
 function FlashCards() {
-  const [selectedId, setSelectedId] = useState(9103);
+  const [selectedId, setSelectedId] = useState(null);
   // define , use , update STATE
 
   function handleClick(id) {
-    setSelectedId(id);
+    setSelectedId(id !== selectedId ? id : null);
   }
 
   return (
@@ -74,6 +74,7 @@ function FlashCards() {
   2- Render that object in a component function using map over it
 
                     Dynamic Part
-  1-
+  1-create selectedId state
+  2- use that state 
 
 */
