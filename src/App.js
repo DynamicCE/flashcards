@@ -66,7 +66,7 @@ function FlashCards() {
   );
 }
 
-// Algorithm for that project:
+// Algorithm for that project :
 
 /* 
                     Static Part
