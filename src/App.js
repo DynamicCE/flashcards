@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./styles.css";
 
 export default function App() {
@@ -43,5 +44,36 @@ const questions = [
 ];
 
 function FlashCards() {
-  return <div>TODO</div>;
+  const [selectedId, setSelectedId] = useState(9103);
+  // define , use , update STATE
+
+  function handleClick(id) {
+    setSelectedId(id);
+  }
+
+  return (
+    <div className="flashcards">
+      {questions.map((q) => (
+        <div
+          key={q.id}
+          onClick={() => handleClick(q.id)}
+          className={q.id === selectedId ? "selected" : ""}
+        >
+          <p>{q.id === selectedId ? q.answer : q.question}</p>
+        </div>
+      ))}
+    </div>
+  );
 }
+
+// Algorithm for that project:
+
+/* 
+                    Static Part
+  1- Create an object which includes flashcards  
+  2- Render that object in a component function using map over it
+
+                    Dynamic Part
+  1-
+
+*/
